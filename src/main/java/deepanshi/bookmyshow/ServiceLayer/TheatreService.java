@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TheatreService {
@@ -63,4 +64,12 @@ return "added theatre successfully";
         theatreSeatRepository.saveAll(seats);
 return seats;
     }
+public Theatre findTheaterById(int id){
+
+        return theatreRepository.findById(id).get();
+}
+public List<Theatre> findAllTheatre(){
+        List<Theatre> theatres=theatreRepository.findAll();
+        return theatres;
+}
 }

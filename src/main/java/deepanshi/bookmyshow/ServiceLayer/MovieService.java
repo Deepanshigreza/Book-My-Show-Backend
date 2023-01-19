@@ -20,12 +20,13 @@ public String addMovie(MovieRequestDto movieRequestDto){
 }
 
 public Movie findMovieByName(String name){
-   return movieRepository.findMovieByName(name);
+
+    return movieRepository.findMovieByName(name);
 }
 
 public List<Movie> findAllMovie(){
 
-    List<Movie> movie=        movieRepository.findAll();
+    List<Movie> movie=movieRepository.findAll();
     return movie;
 }
 

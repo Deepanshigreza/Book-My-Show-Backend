@@ -29,9 +29,8 @@ public List<User> findAll(){
     return  userList;
 }
 
-public User findUser(String userName){
-    User user=userRepository.findUserByName(userName);
-    return user;
+public User findUser(String name){
+    return userRepository.findByName(name);
 }
 
 }
